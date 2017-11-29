@@ -25,9 +25,10 @@ public class MemoryTestMain {
 		System.out.println("---------------------------------------------");
 		System.out.println("Available processors => " + Runtime.getRuntime().availableProcessors());
 		printStats();
-//		useMetaspace();
 		for (int i = 0; i < Integer.MAX_VALUE; i++) {
 			useHeap();
+//			useMetaspace();
+//			useOffHeap();
 			TimeUnit.SECONDS.sleep(1);
 			printStats();
 		}
@@ -38,7 +39,7 @@ public class MemoryTestMain {
 		heap.add(new byte[MB * 4]);
 	}
 
-	public static void useOffHEap() {
+	public static void useOffHeap() {
 		offHeap.add(ByteBuffer.allocateDirect(MB * 4));
 	}
 
