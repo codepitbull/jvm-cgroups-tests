@@ -1,4 +1,5 @@
-FROM openjdk:jdk
+FROM openjdk:8u151-slim
+#FROM openjdk:9.0.1-slim
 
 COPY target/jvm-cgroups-tests-1.0.0-SNAPSHOT.jar /app/jvm-cgroups-tests.jar
 
